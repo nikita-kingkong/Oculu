@@ -1,0 +1,131 @@
+.video-gallery-section {
+	position: relative;
+	z-index: 2;
+	padding: 60px 0 40px;
+	@include media-breakpoint-up(lg) {
+		padding: 108px 0 99px;
+	}
+	&:after {
+		position: absolute;
+		content:'';
+		width: 245px;
+		height: 245px;
+		z-index: 1;
+		right: 0;
+		transform: translateX(65%) scale(0.7);
+		top:24%;
+		border-radius: 50%;
+		border: 55px solid #FF9999;
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+		@include media-breakpoint-up(lg) {
+			transform: translateX(65%) scale(1);
+		}
+	}
+	&:before {
+		content:'';
+		position: absolute;
+		z-index: 1;
+		width: 73px;
+		height: 73px;
+		border-radius: 50%;
+		top: 31%;
+		left: 5%;
+		border: 17px solid #37626C;
+		transform: scale(0.7);
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+		@include media-breakpoint-up(lg) {
+			transform: scale(1);
+			left: 12%;
+		}
+	}
+	.left-decore:before {
+		content:'';
+		position: absolute;
+		width: 471px;
+		height: 471px;
+		border-radius: 50%;
+		border: 110px solid #FF9999;
+		z-index: -1;
+		left: -50%;
+		bottom:-15%;
+		transform: scale(0.4);
+		@include media-breakpoint-up(md) {
+			transform: scale(0.7);
+			left: -16%;
+			bottom: 17%;
+		}
+		@include media-breakpoint-up(lg) {
+			transform: scale(1);
+		}
+	}
+	.row {
+		padding-top: 30px;
+		@include media-breakpoint-up(lg) {
+			padding-top: 74px;
+		}
+		a {
+			display: block;
+			color: $red;
+			text-decoration: none;
+			text-align: center;
+			box-shadow: 0px 67.5889px 90.1186px -36.0474px rgba(255, 153, 153, 0.16);
+			border-radius: 22px;
+			background: #fff;
+			font:1.25rem $fab;
+			margin:  0 0 25px;
+			&:hover {
+				figure span:before {
+					transform: scale(1.1);
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				min-height: 100%;
+				margin: 0;
+			}
+		}
+		figure {
+			margin: 0;
+			span {
+				display: block;
+				position: relative;
+				border-radius: 10px;
+				overflow: hidden;
+				&:before {
+					content:'';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: 40px;
+					z-index: 2;
+					height: 40px;
+					border-radius: 50%;
+					background: url(../images/play-icon.png) 50% 50%;
+					background-size:  100% auto;
+ 					transition: all 0.3s;
+ 					margin: -20px 0 0 -20px;
+ 					@include media-breakpoint-up(lg) {
+						margin: -38.5px 0 0 -38.5px;
+ 						width: 77px;
+ 						height: 77px;
+ 					}
+				}
+			}
+			img {
+				display: block;
+				width: 100%;
+				max-width: none;
+				height: auto;
+			}
+		}
+		figcaption {
+			display: block;
+			padding:  23px 15px 32px;
+		}
+	}
+}

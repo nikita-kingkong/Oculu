@@ -1,0 +1,140 @@
+#header{
+	padding: 10px 0;
+	position: relative;
+	z-index: 5;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:0;
+	z-index: 10;
+	transition: all 0.5s ease;
+	&.sticky {
+		background: #fff;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+		padding: 10px 0;
+		@include media-breakpoint-up(md) {
+			padding: 15px 0;
+		}
+		.logo {
+			height: 58px;
+			@include media-breakpoint-up(md) {
+				height: 70px;
+			}
+			@include media-breakpoint-up(lg) {
+				height: 82px;
+			}
+		}
+		.head-contact{
+			padding: 0;
+			a:hover {
+				color: #F99;
+				.text .big-text {
+					color: #F99;
+				}
+			}
+			.text .big-text {
+				color: $body-color;
+			} 
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		padding: 23px 0;
+	}
+
+	.container{
+		@include media-breakpoint-up(xl) {
+			max-width: 1262px;
+		}
+	}
+
+	.logo{
+		display: block;
+		overflow: hidden;
+		height: 75px;
+		width: 75px;
+		transition: height 0.5s ease;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		@include media-breakpoint-up(md) {
+			width: 90px;
+			height: 90px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 106px;
+			height: 106px;
+		}
+	}
+
+	.d-flex {
+		align-items: center;
+	}
+	.head-contact{
+		margin-left: auto;
+		transition: padding 0.5s ease;
+		@include media-breakpoint-up(md) {
+			padding: 0 0 22px;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+
+			&:hover{
+				color: #F99;
+				.text .big-text {
+					color: #F99;
+				}
+			}
+		}
+
+		i{
+			flex-grow: 1;
+			color: #F99;
+			font-size: 25px;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			display: block;
+			border: 2px solid #F99;
+			border-radius: 50%;
+			@include media-breakpoint-up(md) {
+				max-width: 30px;
+				width: auto;
+				height: auto;
+				border: none;
+				border-radius: 0;
+				margin: 0 10px 0 0;
+
+			}
+		}
+
+		.text{
+			flex-grow: 1;
+			color: #F99;
+			@include rfs(0.937rem);
+			line-height: 1;
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+			p{
+				margin: 0 0 4px;
+			}
+
+			.big-text{
+				display: block;
+				@include rfs(1.562rem);
+				white-space: nowrap;
+				font-family: $fab;
+				color: #fff;
+				transition: color 0.5s ease;
+			}
+		}
+	}
+
+}

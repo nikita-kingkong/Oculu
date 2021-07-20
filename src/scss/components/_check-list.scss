@@ -1,0 +1,49 @@
+ul.check-list {
+	margin: 0;
+	padding: 15px 0 0 15px;
+	list-style: none;
+	font-size: 1.0625rem;
+	position: relative;
+	z-index: 2;
+	@include media-breakpoint-up(md) {
+		padding: 15px 0 0;
+	}
+	li {
+		padding: 0 0 0 55px;
+		margin: 0 0 20px;
+		position: relative;
+		&:before {
+			content: "\e907";
+			font-family: 'icomoon' !important;
+			speak: never;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			position: absolute;
+			left: 0;
+			top:50%;
+			transform: translateY(-50%);
+			color: $red;
+			text-align: center;
+			z-index: 2;
+			font-size: 1.625rem;
+		}
+		&:after {
+			content:'';
+			position: absolute;
+			z-index: 1;
+			width: 74px;
+			height: 56px;
+			left: -19px;
+			transform: translateY(-50%);
+			top: 50%;
+			background: radial-gradient(ellipse at center,  rgba(255,153,153,0.3) 0%, rgba(255,153,153,0.1) 15%,rgba(125,185,232,0) 100%);
+			border-radius: 10px;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 0 0 0 65px;
+			margin: 0 0 25px;
+		}
+	}
+}

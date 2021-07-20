@@ -1,0 +1,41 @@
+.photo-gallery-section {
+	position: relative;
+	padding: 64px 0 48px;
+	z-index: 2;
+	.right-decore {
+		bottom: 60%;
+	}
+	.left-decore:before {
+		content:'';
+		position: absolute;
+		width: 245px;
+		height: 245px;
+		border-radius: 50%;
+		border: 50px solid #f99;
+		top: 23%;
+		left: -24%;
+		transform: scale(0.4);
+		@include media-breakpoint-up(md) {
+			transform: scale(0.7);
+			left: -11%;
+		}
+		@include media-breakpoint-up(lg) {
+			transform: scale(1);
+			left: -9%;
+		}
+	}
+	.container > .row {
+		padding: 26px 0 21px;
+		max-width: 909px;
+		margin: 0 auto;
+		.col-12 {
+			padding: 0;
+		}
+		.row {
+			margin: 0 -9px;
+			[class^="col-"] {
+				padding: 0 9px 15px;
+			}
+		}
+	}
+}

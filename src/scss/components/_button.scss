@@ -1,0 +1,22 @@
+.btn{
+	border-radius: 60px;
+	text-transform: uppercase;
+	color: $white !important;
+	font-family: $fab;
+	text-shadow: 0px 3px 5px rgba(3, 4, 94, 0.2);
+	font-size: 1rem;
+	font-weight: 400;
+	padding: 17px 12px;
+	box-shadow: 0px 10px 30px rgba(255, 153, 153, 0.5);
+	&.gradient {
+		background: linear-gradient(180deg, #FF9999 -25.32%, rgba(255, 153, 153, 0) 142.86%), #DC5B5B;
+		&:hover {
+			background: linear-gradient(0deg, #FF9999 -25.32%, rgba(255, 153, 153, 0) 142.86%), #DC5B5B;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		min-width: 506px;
+		padding: 25px 30px;
+		font-size: 1.25rem;
+	}
+}
